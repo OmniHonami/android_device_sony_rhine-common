@@ -56,7 +56,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/rootdir/fstab.qcom:root/fstab.qcom \
     $(COMMON_PATH)/rootdir/fstab.qcom:recovery/root/fstab.qcom \
-    $(COMMON_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab
+    $(COMMON_PATH)/rootdir/twrp.fstab:recovery/root/twrp.fstab
 
 # Wifi config and firmware
 PRODUCT_COPY_FILES += \
@@ -225,6 +225,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_small_cache_height=1024 \
     ro.hwui.text_large_cache_width=2048 \
     ro.hwui.text_large_cache_height=1024
+
+# Touchscreen
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.input.noresample=1
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
