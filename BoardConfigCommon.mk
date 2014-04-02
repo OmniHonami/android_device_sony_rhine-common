@@ -90,9 +90,6 @@ BOARD_SEPOLICY_UNION := \
     app.te \
     file_contexts
 
-# Kernel handles input boosting
-TARGET_POWERHAL_NO_TOUCH_BOOST := true
-
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 AUDIO_FEATURE_DISABLED_USBAUDIO := true
@@ -125,11 +122,12 @@ BOARD_HARDWARE_CLASS := device/sony/rhine-common/cmhw
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
-TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/twrp.fstab
 
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_USERIMAGES_USE_EXT4 := true
+TARGET_USERIMAGES_USE_F2FS := true
 
 # TWRP flags
 DEVICE_RESOLUTION := 1080x1920
